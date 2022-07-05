@@ -1,8 +1,19 @@
-const person = {
-    name: "hamdi",
-    age: 30,
-    hobbies:["sports","Cooking"]
+const person: {
+    name:string, //  string
+    age: number, //  number
+    hobbies: string[],// array of string
+    role:[number,string] //turple type
+} = {
+    name: "hamdi", //  string
+    age: 30, //  number
+    hobbies: ["sports", "Cooking"],// array of string
+    role:[2,"author"]
 }
+
+
+person.role.push("admin")
+// person.role[1]=1
+
 // error person type
 
 let favoriteActivites: string[];// array of strings
@@ -10,7 +21,7 @@ let favoriteActivites: string[];// array of strings
 
 favoriteActivites = ["sports"]
 
-console.log(person.name)
+console.log(person)
 
 for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase())
