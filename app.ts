@@ -1,17 +1,23 @@
-const person: {
-    name:string, //  string
-    age: number, //  number
-    hobbies: string[],// array of string
-    role:[number,string] //turple type
-} = {
+// const ADMIN =0
+// const READ_ONLY =1
+// const AUTHOR =2
+
+// how to use enum into role
+
+
+enum Role{
+    ADMIN,READ_ONLY,AUTHOR
+} 
+
+const person = {
     name: "hamdi", //  string
     age: 30, //  number
     hobbies: ["sports", "Cooking"],// array of string
-    role:[2,"author"]
+    role:Role.ADMIN
 }
 
 
-person.role.push("admin")
+// person.role.push("admin")
 // person.role[1]=1
 
 // error person type
@@ -25,4 +31,8 @@ console.log(person)
 
 for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase())
+}
+
+if (person.role === Role.AUTHOR) {
+    console.log("admin")
 }
