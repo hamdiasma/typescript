@@ -1,29 +1,17 @@
-// keybord type
-type Combinable = number | string
-type ConversionDesc = "as-number" | "as-string"
-
-
-function combine(
-    input1: Combinable,
-    input2: Combinable,
-    resultConversion: ConversionDesc
-) {
-
-    let result;
-    if (typeof input1 === "number" && typeof input2 === "number" ||resultConversion ==="as-number") {
-        result = +input1 +  +input2
-    }else {
-        result = input1.toString() + input2.toString()
-    } 
-    return result
+function add(n1:number,n2:number) {
+    return n1 + n2
 }
-    
-const combinedAges = combine(30, 26,"as-number")
-console.log(combinedAges) 
+
+// white type
+// function printResult2(num:number):undefined { // error no undefined type for function
+//     console.log("Result: " + num)
+// }
+
+function printResult(num:number):void {
+    console.log("Result: " + num)
+}
 
 
-const combinedAges2 = combine("30", "26","as-number")
-console.log(combinedAges2) 
-
-const combinedNames = combine("ha", "mdi","as-string")
-console.log(combinedNames)  
+//function without retun any things === undefined
+printResult(add(10,9)) // 19
+console.log(printResult(add(10,9))) //undifined
