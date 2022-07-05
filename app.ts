@@ -1,38 +1,16 @@
-// const ADMIN =0
-// const READ_ONLY =1
-// const AUTHOR =2
+function combine(input1: number | string, input2: number | string) {
 
-// how to use enum into role
-
-
-enum Role{
-    ADMIN,READ_ONLY,AUTHOR
-} 
-
-const person = {
-    name: "hamdi", //  string
-    age: 30, //  number
-    hobbies: ["sports", "Cooking"],// array of string
-    role:Role.ADMIN
+    let result;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input1 + input2
+    }else {
+        result = input1.toString() + input2.toString()
+    } 
+    return result
 }
+    
+const combinedAges = combine(30, 26)
+console.log(combinedAges) //correct
 
-
-// person.role.push("admin")
-// person.role[1]=1
-
-// error person type
-
-let favoriteActivites: string[];// array of strings
-// errors =>  favoriteActivites = "sports" ||  ["sports",1]
-
-favoriteActivites = ["sports"]
-
-console.log(person)
-
-for (const hobby of person.hobbies) {
-    console.log(hobby.toUpperCase())
-}
-
-if (person.role === Role.AUTHOR) {
-    console.log("admin")
-}
+const combinedNames = combine("ha", "mdi")
+console.log(combinedNames) //error 
