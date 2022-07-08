@@ -16,7 +16,7 @@ const userName = "hamdi"
 
 // "lib": [],
 
-const buttton = document.querySelector("button")!
+const buttton = document.querySelector("button")
 // console.log(buttton)
 
 buttton.addEventListener("click", () => {
