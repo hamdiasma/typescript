@@ -8,6 +8,11 @@ function add(n1, n2) {
 function printResult(num) {
     console.log("Result: " + num);
 }
+// callback function type
+function addHandler(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
 //function without retun any things === undefined
 printResult(add(10, 9)); // 19
 // let combineValues:Function; type Function
@@ -16,5 +21,8 @@ combineValues = add;
 // combineValues= 5 // error type function
 //combineValues = printResult // undefined
 console.log(combineValues(8, 8));
-// return undefined  
+// return undefined
 //console.log(printResult(add(10,9))) //undifined
+addHandler(10, 5, function (res) {
+    console.log("cb: ", res);
+});
