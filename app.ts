@@ -8,10 +8,20 @@ function add(n1:number,n2:number) {
 // }
 
 function printResult(num:number):void {
-    console.log("Result: " + num)
+    console.log("Result: " + num);
 }
-
-
 //function without retun any things === undefined
-printResult(add(10,9)) // 19
-console.log(printResult(add(10,9))) //undifined
+printResult(add(10, 9)) // 19
+
+// let combineValues:Function; type Function
+let combineValues:(a:number,b:number)=> number; //accept any nuber and return number 
+
+combineValues = add
+// combineValues= 5 // error type function
+//combineValues = printResult // undefined
+
+console.log(combineValues(8,8))
+
+// return undefined  
+//console.log(printResult(add(10,9))) //undifined
+
