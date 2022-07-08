@@ -7,5 +7,18 @@ userInput = "hi";
 if (typeof userInput === "string") {
     // with unknown type we need extra check
     userName = userInput;
-    console.log(userName);
+    // console.log(userName)
 }
+//
+// never => never return any think
+function generateerror(message, code) {
+    throw {
+        message: message,
+        errorCode: code
+    };
+    // never return 
+    // while (true) {
+    // }
+}
+var result = generateerror("error accurd", 500);
+console.log(result);
