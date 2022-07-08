@@ -12,3 +12,4 @@ const buttton = document.querySelector("button");
 buttton.addEventListener("click", () => {
     console.log("click");
 });
+//# sourceMappingURL=app.js.map
