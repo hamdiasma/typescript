@@ -1,36 +1,24 @@
-// unknown type
+// ts compiler: tsc app.ts -w
+const userName = "hamdi"
+ 
+// tell type script in all project runnin is one 
 
-let userInput: unknown
-let userName: string
-
-userInput = 5;
-userInput = "hi"
-
-// userName = userInput // Type 'unknown' is not assignable ~/Desktop/ts (partOne) to type 'string'.
-
-if (typeof userInput === "string") {
-    // with unknown type we need extra check
-    userName = userInput
-
-    // console.log(userName)
-}
+// console.log("my name is : ", userName)
 
 
-//
 
-// never => never return any think
+// to not compile modules with type script
+// 1=> add exclude :["node_modules"] exp
 
-function generateerror(message:string,code:number):never {
-    throw {
-        message: message,
-        errorCode: code
-    } 
-// never return 
-    // while (true) {
-        
-    // }
-}
 
-const result = generateerror("error accurd", 500)
+// tsConfig{} configuration
 
-console.log(result)
+
+// "lib": [],
+
+const buttton = document.querySelector("button")!
+// console.log(buttton)
+
+buttton.addEventListener("click", () => {
+    console.log("click")
+})

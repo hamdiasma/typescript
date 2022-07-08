@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"lite-server",
-    "dev":"tsc app.ts"
+    "dev":"tsc app.ts",
+    "server":" tsc app.ts -w",
+    "all":" tsc -w"
+
   },
   "repository": {
     "type": "git",
